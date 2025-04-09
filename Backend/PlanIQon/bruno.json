@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "PlanIQon",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}

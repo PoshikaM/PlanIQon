@@ -1,0 +1,19 @@
+meta {
+  name: Register
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:5400/register
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "name": "Smith",
+    "email": "smith@example.com",
+    "password": "654321"
+  }
+}
