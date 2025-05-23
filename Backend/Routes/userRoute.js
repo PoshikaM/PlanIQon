@@ -20,6 +20,15 @@ route.post("/register", async (request, response) => {
     )
 })
 
+route.get("/users", async (request, response) => {
+    try {
+        const users = await User.find({}, { password: 0 }); // exclude password field
+        response.json(users);
+    } catch (err) {
+        response.status(500).json({ error: "Failed to fetch users" });
+    }
+});
+
 route.post("/login", async (request, response) => {
     const {email, password} = request.body
     const user = await User.findOne({email})
